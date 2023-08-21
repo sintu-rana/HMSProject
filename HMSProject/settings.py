@@ -39,12 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'HealthCenter',
     'import_export',
+    'corsheaders',
+]
+
+CORS_ALLOWED_ORIGINS = [
+    "https://hmsproject-production.up.railway.app",
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
